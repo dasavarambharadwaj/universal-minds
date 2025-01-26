@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 
 const ContactSection = () => {
+  const netlify = true;
   return (
     <div
       className="text-gray-900 dark:text-white container mx-auto p-6 scroll-mt-16"
@@ -16,12 +17,20 @@ const ContactSection = () => {
       <h2 className="text-3xl font-bold mb-6">Contact Us</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <form className="space-y-4">
+          <form
+            name="contact"
+            method="post"
+            data-netlify="true"
+            data-netlify-recaptcha="true"
+            className="space-y-4"
+          >
+            <input type="hidden" name="form-name" value="contact" />
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-100">
                 Name
               </label>
               <input
+                name="name"
                 type="text"
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
               />
@@ -32,6 +41,7 @@ const ContactSection = () => {
               </label>
               <input
                 type="email"
+                name="email"
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
               />
             </div>
@@ -41,6 +51,7 @@ const ContactSection = () => {
               </label>
               <input
                 type="tel"
+                name="phone"
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
               />
             </div>
@@ -49,16 +60,17 @@ const ContactSection = () => {
                 Message
               </label>
               <textarea
+                name="message"
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
                 rows="4"
               ></textarea>
             </div>
+            <div data-netlify-recaptcha="true"></div>
             <button
-              disabled
               type="submit"
               className="w-full bg-blue-500 text-white p-2 rounded-md"
             >
-              coming soon...
+              Submit
             </button>
           </form>
         </div>

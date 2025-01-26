@@ -8,6 +8,18 @@
     <title>Universal Minds</title>
   </head>
   <body class="bg-white dark:bg-gray-800 transition-all">
+    <form
+      hidden
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      name="contact"
+    >
+      <input name="name" type="text" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <textarea name="message"></textarea>
+      <div data-netlify-recaptcha="true"></div>
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
