@@ -3,7 +3,7 @@ import React from "react";
 const AboutSection = () => {
   return (
     <div
-      className="text-gray-900 dark:text-white flex flex-col md:flex-row p-8 scroll-mt-16"
+      className="text-gray-900 dark:text-white flex flex-col md:flex-row p-8 bg-gray-700 scroll-mt-16"
       id="about"
     >
       <div className="md:w-1/2 p-4">
